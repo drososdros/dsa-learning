@@ -1,7 +1,3 @@
-"""i try to implement circular in node itself
-with leaving it none to make the des if it will set it"""
-
-
 class Node:
     def __init__(self, item) -> None:
         self.item = item
@@ -27,7 +23,7 @@ class Node:
         return self.item <= other.item
 
 
-class CircularLinkedList:
+class DoublyCircularLinkedList:
 
     def __init__(self) -> None:
         self.head: Node | None = None

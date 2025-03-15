@@ -1,16 +1,16 @@
-from doubly_circular_linked_list import CircularLinkedList, Node
+from doubly_circular_linked_list import DoublyCircularLinkedList, Node
 import pytest
 
 
 def test_empty_ll_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
 
     assert ll.head is None
     assert ll.tail is None
 
 
 def test_ll_append_method_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     node = Node(5)
     ll.append(5)
     assert ll.head == node
@@ -22,7 +22,7 @@ def test_ll_append_method_should_succeed():
 
 
 def test_ll_append_3_items_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     node = Node(5)
     node1 = Node(10)
     node2 = Node(3)
@@ -48,12 +48,12 @@ def test_ll_append_3_items_should_succeed():
 
 
 def test_ll_item_method_empty_list_should_fail():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     assert len(ll) == 0
 
 
 def test_ll_iter_method_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(1)
     ll.append(2)
     ll.append(3)
@@ -67,12 +67,12 @@ def test_ll_iter_method_should_succeed():
 
 
 def test_ll_len_method_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     assert len(ll) == 0
 
 
 def test_ll_prepend_method_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     node = Node(5)
     ll.prepend(5)
     assert ll.head == node
@@ -84,7 +84,7 @@ def test_ll_prepend_method_should_succeed():
 
 
 def test_ll_prepend_3_items_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     node = Node(5)
     node1 = Node(10)
     node2 = Node(3)
@@ -109,7 +109,7 @@ def test_ll_prepend_3_items_should_succeed():
 
 
 def test_ll_insert_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     node = Node(5)
     node1 = Node(10)
     node2 = Node(3)
@@ -134,7 +134,7 @@ def test_ll_insert_should_succeed():
 
 
 def test_ll_insert_greater_index_raise_IndexError_should_fail():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.prepend(3)
     with pytest.raises(IndexError)as e:
         ll.insert(5, 12)
@@ -142,7 +142,7 @@ def test_ll_insert_greater_index_raise_IndexError_should_fail():
 
 
 def test_ll_insert_lower_index_raise_IndexError_should_fail():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.prepend(3)
     with pytest.raises(IndexError)as e:
         ll.insert(-1, 12)
@@ -150,7 +150,7 @@ def test_ll_insert_lower_index_raise_IndexError_should_fail():
 
 
 def test_ll_instert_0_intex_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.prepend(3)
     node = Node(12)
     ll.insert(0, 12)
@@ -158,7 +158,7 @@ def test_ll_instert_0_intex_should_succeed():
 
 
 def test_ll_instert_end_intex_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.prepend(3)
     ll.prepend(4)
     ll.append(5)
@@ -168,12 +168,12 @@ def test_ll_instert_end_intex_should_succeed():
 
 
 def test_ll_str_method_with_empty_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     assert str(ll) == "Empty Linked List"
 
 
 def test_ll_str_method_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     ll.append(10)
     ll.append(11)
@@ -182,13 +182,13 @@ def test_ll_str_method_should_succeed():
 
 def test_ll_get_method_with_empty_list():
 
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     n = Node(5)
     assert ll.get(n) is None
 
 
 def test_ll_get_method_with_positive_out_of_range_should_fail():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     with pytest.raises(IndexError) as e:
 
@@ -197,7 +197,7 @@ def test_ll_get_method_with_positive_out_of_range_should_fail():
 
 
 def test_ll_get_method_positive_index_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     n = Node(12)
     ll.append(5)
     ll.append(11)
@@ -207,7 +207,7 @@ def test_ll_get_method_positive_index_should_succeed():
 
 
 def test_ll_get_method_with_negative_index_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     n = Node(11)
     ll.append(5)
     ll.append(11)
@@ -217,7 +217,7 @@ def test_ll_get_method_with_negative_index_should_succeed():
 
 
 def test_ll_get_method_with_negative_index_out_of_range_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     ll.append(11)
     ll.append(12)
@@ -229,7 +229,7 @@ def test_ll_get_method_with_negative_index_out_of_range_should_succeed():
 
 
 def test_ll_get_method_with_node_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     n = Node(5)
     ll.append(5)
     found = ll.get(n)
@@ -237,7 +237,7 @@ def test_ll_get_method_with_node_should_succeed():
 
 
 def test_ll_get_method_with_node_dont_exitst_should_fail():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     n = Node(12)
     ll.append(5)
     found = ll.get(n)
@@ -245,14 +245,14 @@ def test_ll_get_method_with_node_dont_exitst_should_fail():
 
 
 def test_ll_pop_method_empty_list_should_fail():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     assert ll.pop() is None
     assert ll.head is None
     assert ll.tail is None
 
 
 def test_ll_pop_method_1_item_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     assert ll.pop().item == 5
     assert ll.length == 0
@@ -261,7 +261,7 @@ def test_ll_pop_method_1_item_should_succeed():
 
 
 def test_ll_pop_method_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     ll.append(15)
     ll.append(25)
@@ -279,14 +279,14 @@ def test_ll_pop_method_should_succeed():
 
 
 def test_ll_pop_first_empty_should_fail():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     assert ll.pop_first() is None
     assert ll.head is None
     assert ll.tail is None
 
 
 def test_ll_pop_first_1_item_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     assert ll.length == 1
     poped = ll.pop_first()
@@ -299,7 +299,7 @@ def test_ll_pop_first_1_item_should_succeed():
 
 
 def test_ll_pop_item_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     ll.append(15)
     ll.append(25)
@@ -313,7 +313,7 @@ def test_ll_pop_item_should_succeed():
 
 
 def test_ll_clear_should_succeed():
-    ll = CircularLinkedList()
+    ll = DoublyCircularLinkedList()
     ll.append(5)
     ll.append(15)
     ll.append(25)
