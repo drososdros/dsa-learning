@@ -1,4 +1,4 @@
-from circular_linked_list import CircularLinkedList, Node
+from doubly_circular_linked_list import CircularLinkedList, Node
 import pytest
 
 

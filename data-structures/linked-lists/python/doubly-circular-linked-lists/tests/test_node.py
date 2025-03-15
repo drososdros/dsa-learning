@@ -1,5 +1,5 @@
 import pytest
-from circular_linked_list import Node
+from doubly_circular_linked_list import Node
 
 
 def test_create_node_should_succeed():
