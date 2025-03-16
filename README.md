@@ -4,7 +4,10 @@ This repository is dedicated to my journey of learning Data Structures and Algor
 
 I will be continually updating this repository with new algorithms and data structures as I progress. Contributions, suggestions, and improvements are always welcome!
 ## Data Structures
+* ### Linked Lists
+    * - [Doubly Linked List(python)](https://github.com/drososdros/dsa-learning/tree/main/data-structures/linked-lists/python/doubly-circular-linked-lists)
 
-- [Doubly Linked List](https://github.com/drososdros/dsa-learning/tree/main/data-structures/linked-lists/python/doubly-circular-linked-lists)
-
-
+## Tools
+* ### DirTree
+     a directory printing tool to understand recursion
+    * - [Dir printing tool (python)](https://github.com/drososdros/dsa-learning/tree/main/tools/dir-tree/python)
