@@ -6,6 +6,10 @@ I will be continually updating this repository with new algorithms and data stru
 ## Data Structures
 * ### Linked Lists
     * - [Doubly Linked List(python)](https://github.com/drososdros/dsa-learning/tree/main/data-structures/linked-lists/python/doubly-circular-linked-lists)
+* ### Queue
+    Circular queue on a predefined size on top of a list
+    * - [Circular Queue(python)](https://github.com/drososdros/dsa-learning/tree/main/data-structures/queue/circular-queue.py)
+
 
 ## Tools
 * ### DirTree
